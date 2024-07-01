@@ -53,7 +53,10 @@ ADD ./uploads /app/uploads
 ADD ./swirl.py /app/swirl.py
 ADD ./swirl_load.py /app/swirl_load.py
 ADD ./manage.py /app/manage.py
+ADD ./entrypoint.sh /app/entrypoint.sh
 
 WORKDIR /app
 
-EXPOSE 8000
+EXPOSE 8080
+
+ENTRYPOINT ["/app/entrypoint.sh"]
